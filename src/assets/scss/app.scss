@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-@import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import "settings";
+@import "foundation";
+@import "motion-ui";
 
 // Global styles
 @include foundation-global-styles;
@@ -10,8 +10,8 @@
 @include foundation-typography;
 
 // Grids (choose one)
-@include foundation-xy-grid-classes;
-// @include foundation-grid;
+// @include foundation-xy-grid-classes;
+@include foundation-grid;
 // @include foundation-flex-grid;
 
 // Generic components
@@ -62,3 +62,38 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Custom code
+.top-bar {
+  background: #fff;
+  ul {
+    background: #fff;
+  }
+  .top-bar-left {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 35%;
+  }
+  .top-bar-right {
+    width: 35%;
+  }
+  .nav-logo {
+    width: 60px;
+  }
+}
+
+.menu {
+  a,
+  .button {
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: 0.7rem 1rem;
+    font-family: "rigid-square", sans-serif;
+    letter-spacing: 1px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+}
