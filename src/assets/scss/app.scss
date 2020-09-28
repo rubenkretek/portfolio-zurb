@@ -63,9 +63,35 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-// Custom code ----------
-
 //Main Nav
+.title-bar {
+  background: #fff;
+  min-height: 75px;
+
+  .menu-icon {
+    margin-left: 1rem;
+
+    &.dark::after {
+      height: 3px;
+    }
+  }
+
+  &__home-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+
+  &__logo {
+    width: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 .top-bar {
   background: #fff;
   ul {

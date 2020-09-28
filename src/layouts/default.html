@@ -21,17 +21,25 @@ unless specified. --}}
       data-responsive-toggle="main-nav"
       data-hide-for="medium"
     >
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
+      <button class="menu-icon dark" type="button" data-toggle></button>
+      <a href="/" class="title-bar__home-link">
+        <img
+          class="title-bar__logo"
+          src="/assets/img/black-logo.svg"
+          alt="Design talk logo"
+        />
+      </a>
     </div>
     <nav class="top-bar" id="main-nav">
       <div class="top-bar-left">
-        <ul class="menu expanded align-center vertical medium-horizontal">
+        <ul
+          class="menu expanded align-left medium-align-center vertical medium-horizontal"
+        >
           <li><a href="/about.html">About</a></li>
           <li><a href="/work.html">Work</a></li>
         </ul>
       </div>
-      <div class="top-bar-center">
+      <div class="top-bar-center show-for-medium">
         <a href="/">
           <img
             class="nav-logo"
@@ -41,7 +49,9 @@ unless specified. --}}
         </a>
       </div>
       <div class="top-bar-right">
-        <ul class="menu expanded align-center vertical medium-horizontal">
+        <ul
+          class="menu expanded align-left medium-align-center vertical medium-horizontal"
+        >
           <li><a href="/">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
