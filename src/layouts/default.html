@@ -16,9 +16,17 @@ unless specified. --}}
     />
   </head>
   <body>
-    <nav class="top-bar">
+    <div
+      class="title-bar"
+      data-responsive-toggle="main-nav"
+      data-hide-for="medium"
+    >
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+    <nav class="top-bar" id="main-nav">
       <div class="top-bar-left">
-        <ul class="menu expanded align-center">
+        <ul class="menu expanded align-center vertical medium-horizontal">
           <li><a href="/about.html">About</a></li>
           <li><a href="/work.html">Work</a></li>
         </ul>
@@ -33,7 +41,7 @@ unless specified. --}}
         </a>
       </div>
       <div class="top-bar-right">
-        <ul class="menu expanded align-center">
+        <ul class="menu expanded align-center vertical medium-horizontal">
           <li><a href="/">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
