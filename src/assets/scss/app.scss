@@ -63,7 +63,49 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-//Main Nav
+// Typography
+.heading-xlarge {
+  line-height: 0.85;
+  color: #000;
+  font-family: neue-haas-grotesk-display;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 6rem;
+}
+
+.banner-text {
+  font-size: 24px;
+  line-height: 1.3;
+  color: #2d2e33;
+  font-family: neue-haas-grotesk-display;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.red-text {
+  color: #e31617;
+}
+
+// Buttons
+.button {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+  box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+    4px 4px 0px #000;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 0px #e31617, 2px 2px 0px #e31617, 3px 3px 0px #e31617,
+      4px 4px 0px #e31617;
+    background: #fff;
+    color: #000;
+  }
+}
+
+// Main Nav
 .title-bar {
   background: #fff;
   min-height: 75px;
@@ -123,6 +165,23 @@
     color: #000;
     text-transform: uppercase;
     font-weight: 800;
+  }
+}
+
+#main-nav {
+  ul {
+    li {
+      a {
+        font-size: 34px;
+        line-height: 2;
+      }
+      @include breakpoint(medium) {
+        a {
+          line-height: 1;
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
 
