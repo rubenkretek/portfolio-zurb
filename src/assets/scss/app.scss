@@ -64,6 +64,14 @@
 @include motion-ui-animations;
 
 // Typography
+.heading-large {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
 .heading-xlarge {
   line-height: 0.85;
   color: #000;
@@ -72,6 +80,14 @@
   text-transform: uppercase;
   letter-spacing: 0;
   font-size: 6rem;
+}
+
+.lead-text {
+  font-size: 17px;
+  line-height: 1.4;
+  color: #2d2e33;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .banner-text {
@@ -87,6 +103,14 @@
   color: #e31617;
 }
 
+.red-highlight {
+  background: #e31617;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 10px 5px;
+  margin-left: -10px;
+}
+
 // Buttons
 .button {
   background-color: #fff;
@@ -95,6 +119,9 @@
   box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
     4px 4px 0px #000;
   transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   &:hover,
   &:focus {
@@ -230,7 +257,42 @@
 
 // Layout
 
-section {
+.container {
   max-width: 90%;
   margin: 0 auto;
+  display: flex;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.section {
+  &--full-height {
+    min-height: 100vh;
+  }
+  &--horizontal-center {
+    display: flex;
+    align-content: center;
+  }
+}
+
+.secondary {
+  background-color: #0d0e10;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: #fff;
+  }
+}
+
+// Home
+#home__section-2 {
+  background: url("/assets/img/home-mountain.jpg");
+  background-position: 50% 100%;
+  background-size: cover;
 }
