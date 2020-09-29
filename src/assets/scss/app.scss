@@ -64,6 +64,21 @@
 @include motion-ui-animations;
 
 // Typography
+
+h2,
+.heading-h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+a,
+.hyperlink {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .heading-large {
   font-size: clamp(3rem, 7vw, 6rem);
   line-height: 1;
@@ -205,6 +220,10 @@
   .nav-logo {
     width: 60px;
   }
+
+  .top-bar-right ul li a {
+    text-align: right;
+  }
 }
 
 .menu {
@@ -297,15 +316,49 @@
 
 // Footer
 .footer {
-  background-color: #000;
   color: #fff;
+  padding: 70px 0;
+  text-align: center;
   &__image {
-    max-width: 200px;
+    max-width: 100px;
     margin: 0 auto;
     display: block;
   }
+  &__email {
+    color: #fff;
+
+    &:hover {
+      color: #e31617;
+    }
+  }
 }
 
+.bottom-module {
+  padding: 10px 0;
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+
+    li {
+      flex-grow: 1;
+      border-right: 2px solid rgba(255, 255, 255, 0.62);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
 // Layout
 
 .container {
