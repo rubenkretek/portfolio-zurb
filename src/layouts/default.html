@@ -14,6 +14,10 @@ unless specified. --}}
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/73ee2bf7e1.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div
@@ -21,17 +25,30 @@ unless specified. --}}
       data-responsive-toggle="main-nav"
       data-hide-for="medium"
     >
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
+      <button class="menu-icon dark" type="button" data-toggle></button>
+      <a href="/" class="title-bar__home-link">
+        <img
+          class="title-bar__logo"
+          src="/assets/img/black-logo.svg"
+          alt="Design talk logo"
+        />
+      </a>
     </div>
-    <nav class="top-bar" id="main-nav">
+    <nav
+      class="top-bar container"
+      id="main-nav"
+      data-toggler
+      data-animate="slide-in-down slide-out-up"
+    >
       <div class="top-bar-left">
-        <ul class="menu expanded align-center vertical medium-horizontal">
+        <ul
+          class="menu expanded align-left medium-align-center vertical medium-horizontal"
+        >
           <li><a href="/about.html">About</a></li>
           <li><a href="/work.html">Work</a></li>
         </ul>
       </div>
-      <div class="top-bar-center">
+      <div class="top-bar-center show-for-medium">
         <a href="/">
           <img
             class="nav-logo"
@@ -41,7 +58,9 @@ unless specified. --}}
         </a>
       </div>
       <div class="top-bar-right">
-        <ul class="menu expanded align-center vertical medium-horizontal">
+        <ul
+          class="menu expanded align-left medium-align-center vertical medium-horizontal"
+        >
           <li><a href="/">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -49,31 +68,37 @@ unless specified. --}}
     </nav>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the
     flattened page is created. --}} {{> body}}
-    <footer class="footer">
+    <footer class="footer secondary">
       <div class="row">
         <div class="small-10 small-centered medium-6">
           <img class="footer__image" src="/assets/img/white-logo.svg" />
         </div>
         <div class="small-10 small-centered medium-6">
-          <a href="mailto:ruben@design-talk.co.uk">ruben@design-talk.co.uk</a>
-        </div>
-        <div class="small-10 small-centered medium-6">
-          <ul class="footer__links">
-            <li>
-              <a href="https://www.linkedin.com/in/ruben-kretek-ab296b13b/"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/privacy-policy">Privacy</a>
-            </li>
-          </ul>
+          <a
+            href="mailto:ruben@design-talk.co.uk"
+            class="footer__email heading-h2"
+            >ruben@design-talk.co.uk</a
+          >
         </div>
       </div>
     </footer>
+    <section class="secondary bottom-module">
+      <div class="small-10 small-centered medium-6">
+        <ul class="bottom-module__links">
+          <li>
+            <a href="https://www.linkedin.com/in/ruben-kretek-ab296b13b/"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="/privacy-policy">Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <script src="{{root}}assets/js/app.js"></script>
   </body>
