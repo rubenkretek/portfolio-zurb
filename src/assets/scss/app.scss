@@ -109,6 +109,8 @@
 .title-bar {
   background: #fff;
   min-height: 75px;
+  z-index: 9999;
+  position: relative;
 
   .menu-icon {
     margin-left: 1rem;
@@ -166,6 +168,10 @@
     text-transform: uppercase;
     font-weight: 800;
   }
+  &-icon.dark {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 #main-nav {
@@ -203,6 +209,11 @@
   &__button-container {
     position: absolute;
     bottom: 10px;
+    width: 60px;
+    left: 0;
+    right: 0;
+    margin-left: auto !important;
+    margin-right: autO !important;
   }
 }
 
@@ -215,4 +226,11 @@
     margin: 0 auto;
     display: block;
   }
+}
+
+// Layout
+
+section {
+  max-width: 90%;
+  margin: 0 auto;
 }
