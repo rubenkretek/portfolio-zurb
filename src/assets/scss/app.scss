@@ -222,7 +222,10 @@ a,
   }
 
   .top-bar-right ul li a {
-    text-align: right;
+    text-align: left;
+    @include breakpoint(medium) {
+      text-align: right;
+    }
   }
 }
 
