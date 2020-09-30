@@ -412,7 +412,7 @@ section {
   }
 
   &__highlight {
-    font-size: 5rem;
+    font-size: clamp(3.25rem, 7vw, 5rem);
   }
 
   &__buttons {
