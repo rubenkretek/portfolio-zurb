@@ -94,41 +94,46 @@ a,
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
-  //font-size: 6rem;
-  font-size: clamp(6rem, 9vw, 8rem);
+  font-size: clamp(5rem, 15vw, 8rem);
 }
 
-.lead-text {
-  font-size: 17px;
-  line-height: 1.4;
-  color: #2d2e33;
-  font-weight: 700;
-  letter-spacing: 0;
-}
+.text {
+  &--banner {
+    font-size: clamp(20px, 3vw, 24px);
+    line-height: 1.3;
+    color: #2d2e33;
+    font-family: neue-haas-grotesk-display;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
 
-.banner-text {
-  font-size: clamp(20px, 3vw, 24px);
-  line-height: 1.3;
-  color: #2d2e33;
-  font-family: neue-haas-grotesk-display;
-  font-weight: 700;
-  letter-spacing: 0;
-}
+  &--red {
+    color: #e31617;
+  }
 
-.red-text {
-  color: #e31617;
-}
+  &--lead {
+    font-size: 17px;
+    line-height: 1.4;
+    color: #2d2e33;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
 
-.red-highlight {
-  background: #e31617;
-  color: #fff;
-  display: inline-block;
-  padding: 3px 10px 5px;
-  margin-left: -10px;
-}
+  &--red-highlight {
+    background: #e31617;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 10px 5px;
+    margin-left: -10px;
+  }
 
-.centered-text {
-  text-align: center;
+  &--centered {
+    text-align: center;
+  }
+
+  &--light {
+    color: #fff;
+  }
 }
 
 // Buttons
@@ -269,6 +274,11 @@ a,
 .banner {
   &--fullheight {
     height: calc(-75px + 100vh);
+    display: flex;
+  }
+
+  &--70height {
+    height: calc(-75px + 70vh);
     display: flex;
   }
 
@@ -435,4 +445,10 @@ section {
   background-position: 50% 100%;
   background-size: cover;
   min-height: 565px;
+}
+
+// About
+#about__section-2 {
+  background: linear-gradient(45deg, #def0f4 0%, #b0cfd2 100%);
+  padding-bottom: 0;
 }

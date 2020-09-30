@@ -1,25 +1,28 @@
 <section class="banner about__banner banner--70height 1200-width">
-  <div class="row">
-    <div class="small-12 medium-10 large-6">
-      <h1>About</h1>
-      <p>
-        I live in West Sussex with my partner, two cats, and my 2004 Mini Cooper
-        S. My goal in life is to improve people’s lives through good design.
-      </p>
-      <a href="#" class="button">Discover</a>
+  <div class="container">
+    <div class="row banner__content-container">
+      <div class="small-12 medium-10 large-6">
+        <h1 class="heading-xlarge">About</h1>
+        <p class="text--banner">
+          I live in West Sussex with my partner, two cats, and my 2004 Mini
+          Cooper S. My goal in life is to improve people’s lives through <span class="red-text">good
+          design.</span></p>
+        </p>
+        <a href="#about__section-2" class="button" data-smooth-scroll>Discover</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="row">
-    <div class="column small-10 small-centered">
-      <h1>
+<section id="about__section-2">
+  <div class="row container">
+    <div class="columns small-12 medium-8 large-6 small-centered">
+      <h2 class="heading-xlarge text--light">
         I design<br />
         I build <br />
         I learn
-      </h1>
-      <p>
+      </h2>
+      <p class="text--light text--lead">
         I started my career as a UI/UX designer for a small marketing agency,
         where I dabbled in styling WordPress themes. The developer at said
         agency left suddenly, leaving me to take over the role and learn all the
@@ -31,59 +34,63 @@
       </p>
     </div>
   </div>
-  <div class="column small-10 small-centered">
-    <img src="/assets/img/about-building.png" />
+  <div class="row container">
+    <div class="columns small-12 medium-8  large-6 small-centered">
+      <img src="/assets/img/about-building.png" />
+    </div>
   </div>
 </section>
 
 <section>
-  <div class="row">
-    <div class="column small-6">
-      <h2>
-        Communication<br />
-        Is Key
-      </h2>
-      <p>
-        I have worked on projects for businesses across a range of industries,
-        from the independent cafe to the multinational art supplies distributor.
-      </p>
-      <p>
-        I believe in face-to-face contact being the best way to communicate,
-        whether in person or online, so I always present my projects directly to
-        the client.
-      </p>
-      <a href="/work">My work</a>
-    </div>
-    <div class="column small-6">
-      <h2>Examples of work</h2>
-      <div class="tabs-content" data-tabs-content="work-examples-tabs">
-        <div class="tabs-panel is-active" id="panel1">
-          <h3>Waste Clearance</h3>
-          <a href="/work/gs-clearance">View project</a>
-          <img src="/assets/img/gs-thumbnail.jpg" />
-        </div>
-        <div class="tabs-panel" id="panel2">
-          <h3>Marketing agency</h3>
-          <a href="/work/huga">View project</a>
-          <img src="/assets/img/huga-thumbnail.jpg" />
-        </div>
-        <div class="tabs-panel" id="panel3">
-          <h3>Care Agency</h3>
-          <a href="/work/firstcol">View project</a>
-          <img src="/assets/img/firstcol-thumbnail.jpg" />
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="column small-12 medium-6">
+        <h2 class="heading-large">
+          <span class="text--red-highlight">Communication</span><br />
+          Is Key
+        </h2>
+        <p class="text--lead">
+          I have worked on projects for businesses across a range of industries,
+          from the independent cafe to the multinational art supplies distributor.
+        </p>
+        <p class="text--lead">
+          I believe in face-to-face contact being the best way to communicate,
+          whether in person or online, so I always present my projects directly to
+          the client.
+        </p>
+        <a href="/work">My work</a>
       </div>
-      <ul class="tabs" data-tabs id="work-examples-tabs">
-        <li class="tabs-title is-active">
-          <a href="#panel1" aria-selected="true">1</a>
-        </li>
-        <li class="tabs-title">
-          <a data-tabs-target="panel2" href="#panel2">2</a>
-        </li>
-        <li class="tabs-title">
-          <a data-tabs-target="panel3" href="#panel3">3</a>
-        </li>
-      </ul>
+      <div class="column small-12 medium-6">
+        <h2>Examples of work</h2>
+        <div class="tabs-content" data-tabs-content="work-examples-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <h3>Waste Clearance</h3>
+            <a href="/work/gs-clearance">View project</a>
+            <img src="/assets/img/gs-thumbnail.jpg" />
+          </div>
+          <div class="tabs-panel" id="panel2">
+            <h3>Marketing agency</h3>
+            <a href="/work/huga">View project</a>
+            <img src="/assets/img/huga-thumbnail.jpg" />
+          </div>
+          <div class="tabs-panel" id="panel3">
+            <h3>Care Agency</h3>
+            <a href="/work/firstcol">View project</a>
+            <img src="/assets/img/firstcol-thumbnail.jpg" />
+          </div>
+        </div>
+        <ul class="tabs" data-tabs id="work-examples-tabs">
+          <li class="tabs-title is-active">
+            <a href="#panel1" aria-selected="true">1</a>
+          </li>
+          <li class="tabs-title">
+            <a data-tabs-target="panel2" href="#panel2">2</a>
+          </li>
+          <li class="tabs-title">
+            <a data-tabs-target="panel3" href="#panel3">3</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
