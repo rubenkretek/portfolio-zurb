@@ -6,15 +6,15 @@
     <div class="row banner__content-container">
       <div class="small-12 medium-12 large-12">
         <h1 class="heading-xlarge">G&S Clearance</h1>
-        <div class="container__project-info">
-          <div>
+        <div class="row">
+          <div class="column small-12 medium-4">
             <h2 class="heading-h3 text--red">Who are G&S Clearance?</h2>
             <p class="text--meta">
               A fast growing waste clearance company with a good customer
               reputation, operating in the South East.
             </p>
           </div>
-          <div>
+          <div class="column small-12 medium-4">
             <h2 class="heading-h3 text--red">The brief</h2>
             <ul class="text--meta">
               <li>Give the website a visual overhaul</li>
@@ -22,7 +22,7 @@
               <li>Improve speed</li>
             </ul>
           </div>
-          <div>
+          <div class="column small-12 medium-4">
             <h2 class="heading-h3 text--red">Deliverables</h2>
             <ul class="text--meta">
               <li>Give the website a visual overhaul</li>
@@ -34,11 +34,33 @@
       </div>
     </div>
     <div class="row banner__button-container">
-      <a href="#home__section-2" class="button button--icon" data-smooth-scroll
+      <a
+        href="#work-deeper__section-2"
+        class="button button--icon"
+        data-smooth-scroll
         ><i class="fas fa-caret-down"></i
       ></a>
     </div>
   </div>
 </section>
 
-<section id="work-deeper__section-2"></section>
+<section id="work-deeper__section-2">
+  <div class="column small-12 medium-6">
+    <div class="tabs-content" data-tabs-content="work-examples-tabs">
+      <div class="tabs-panel is-active" id="panel1">
+        <img class="card__image" src="/assets/img/gs-thumbnail.png" />
+      </div>
+    </div>
+    <ul class="tabs" data-tabs id="work-examples-tabs">
+      <li class="tabs-title is-active">
+        <a href="#panel1" class="button" aria-selected="true">1</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel2" class="button" href="#panel2">2</a>
+      </li>
+      <li class="tabs-title">
+        <a data-tabs-target="panel3" class="button" href="#panel3">3</a>
+      </li>
+    </ul>
+  </div>
+</section>

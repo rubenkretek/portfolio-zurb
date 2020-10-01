@@ -8,6 +8,9 @@
 @include foundation-global-styles;
 @include foundation-forms;
 @include foundation-typography;
+.row {
+  overflow: hidden;
+}
 
 // Grids (choose one)
 // @include foundation-xy-grid-classes;
@@ -118,6 +121,7 @@ a,
   text-transform: uppercase;
   letter-spacing: 0;
   font-size: clamp(5rem, 15vw, 8rem);
+  word-wrap: break-word;
 }
 
 .text {
