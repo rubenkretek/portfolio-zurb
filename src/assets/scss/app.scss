@@ -67,7 +67,6 @@
 @include motion-ui-animations;
 
 // Typography
-
 h2,
 .heading-h2 {
   font-size: 22px;
@@ -122,6 +121,7 @@ a,
   letter-spacing: 0;
   font-size: clamp(5rem, 15vw, 8rem);
   word-wrap: break-word;
+  margin-bottom: 20px;
 }
 
 .text {
@@ -347,6 +347,10 @@ a,
     margin-left: auto !important;
     margin-right: autO !important;
   }
+
+  .container {
+    display: flex;
+  }
 }
 
 // Card
@@ -431,6 +435,7 @@ a,
 
 .tabs {
   border: none;
+  background: none;
 
   &-title {
     float: left;
@@ -455,7 +460,6 @@ a,
 .container {
   max-width: 90%;
   margin: 0 auto;
-  display: flex;
 
   &--centered {
     margin: 0 auto;
@@ -563,5 +567,34 @@ section {
         }
       }
     }
+  }
+}
+
+// Work
+.gs-green {
+  background: #e8efde;
+}
+
+.half-half-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+
+    div {
+      width: 50%;
+    }
+
+    &__text {
+      padding: 50px;
+    }
+  }
+
+  &__text {
+    padding: 50px 0;
   }
 }
