@@ -8,6 +8,9 @@
 @include foundation-global-styles;
 @include foundation-forms;
 @include foundation-typography;
+.row {
+  overflow: hidden;
+}
 
 // Grids (choose one)
 // @include foundation-xy-grid-classes;
@@ -64,10 +67,16 @@
 @include motion-ui-animations;
 
 // Typography
-
 h2,
 .heading-h2 {
   font-size: 22px;
+  font-weight: 600;
+}
+
+h3,
+.heading-h3 {
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 600;
 }
 
@@ -77,6 +86,10 @@ h4,
   line-height: 1.2;
   font-weight: 600;
   text-transform: lowercase;
+}
+
+p {
+  font-weight: 500;
 }
 
 a,
@@ -111,6 +124,8 @@ a,
   text-transform: uppercase;
   letter-spacing: 0;
   font-size: clamp(5rem, 15vw, 8rem);
+  word-wrap: break-word;
+  margin-bottom: 20px;
 }
 
 .text {
@@ -130,8 +145,15 @@ a,
   &--lead {
     font-size: 17px;
     line-height: 1.4;
-    color: #2d2e33;
     font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  &--meta {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    font-weight: 600;
     letter-spacing: 0;
   }
 
@@ -329,6 +351,10 @@ a,
     margin-left: auto !important;
     margin-right: autO !important;
   }
+
+  .container {
+    display: flex;
+  }
 }
 
 // Card
@@ -413,6 +439,7 @@ a,
 
 .tabs {
   border: none;
+  background: none;
 
   &-title {
     float: left;
@@ -437,7 +464,6 @@ a,
 .container {
   max-width: 90%;
   margin: 0 auto;
-  display: flex;
 
   &--centered {
     margin: 0 auto;
@@ -547,6 +573,49 @@ section {
     }
   }
 }
+
+
+// Work
+.gs-green {
+  background: #e8efde;
+}
+
+.huga-blue {
+  background: #d8eef9;
+}
+
+.firstcol-pink {
+  background: #f7d2e6;
+}
+
+.half-half-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+
+  &__text {
+    padding: 50px 0;
+  }
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+
+    div {
+      width: 50%;
+    }
+
+    &__text {
+      padding: 50px;
+    }
+  }
+}
+
+.work__conclusion {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 
 // Contact
 .contact {
