@@ -71,6 +71,13 @@ h2,
   font-weight: 600;
 }
 
+h3,
+.heading-h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
 h4,
 .heading-h4 {
   font-size: 16px;
@@ -130,8 +137,15 @@ a,
   &--lead {
     font-size: 17px;
     line-height: 1.4;
-    color: #2d2e33;
     font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  &--meta {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    font-weight: 600;
     letter-spacing: 0;
   }
 
