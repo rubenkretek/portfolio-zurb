@@ -574,6 +574,7 @@ section {
   }
 }
 
+
 // Work
 .gs-green {
   background: #e8efde;
@@ -615,4 +616,10 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+
+// Contact
+.contact {
+  &__buttons a {
+    margin-right: 10px;
+  }
 }
