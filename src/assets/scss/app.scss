@@ -547,3 +547,10 @@ section {
     }
   }
 }
+
+// Contact
+.contact {
+  &__buttons a {
+    margin-right: 10px;
+  }
+}
