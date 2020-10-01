@@ -582,6 +582,10 @@ section {
   align-items: center;
   margin: 50px 0;
 
+  &__text {
+    padding: 50px 0;
+  }
+
   @include breakpoint(medium) {
     flex-direction: row;
 
@@ -593,8 +597,10 @@ section {
       padding: 50px;
     }
   }
+}
 
-  &__text {
-    padding: 50px 0;
-  }
+.work__conclusion {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
