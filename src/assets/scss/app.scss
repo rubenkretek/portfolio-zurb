@@ -64,6 +64,10 @@
 @include motion-ui-animations;
 
 // Typography
+body {
+  font-weight: 500;
+}
+
 h2,
 .heading-h2 {
   font-size: 22px;
@@ -75,6 +79,7 @@ h3,
   font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
+  margin-top: 15px;
 }
 
 h4,
@@ -111,6 +116,7 @@ a,
   font-weight: 900;
   letter-spacing: 0;
   font-style: normal;
+  margin-bottom: 25px;
 }
 
 .heading-xlarge {
@@ -444,6 +450,10 @@ a,
 .tabs {
   border: none;
   background: none;
+  margin-bottom: 50px;
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
 
   &-title {
     float: left;
@@ -476,6 +486,13 @@ a,
 
 .row {
   max-width: 100%;
+}
+
+.card.column {
+  margin-bottom: 35px;
+  @include breakpoint(medium) {
+    margin-bottom: 35px;
+  }
 }
 
 section {
@@ -600,14 +617,18 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 0;
 
   &__text {
-    padding: 50px 0;
+    padding: 20px 0;
+    @include breakpoint(medium) {
+      padding: 50px 0;
+    }
   }
 
   @include breakpoint(medium) {
     flex-direction: row;
+    margin: 50px 0;
 
     div {
       width: 50%;
