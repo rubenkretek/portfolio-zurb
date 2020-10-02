@@ -8,9 +8,6 @@
 @include foundation-global-styles;
 @include foundation-forms;
 @include foundation-typography;
-.row {
-  overflow: hidden;
-}
 
 // Grids (choose one)
 // @include foundation-xy-grid-classes;
@@ -67,6 +64,10 @@
 @include motion-ui-animations;
 
 // Typography
+body {
+  font-weight: 500;
+}
+
 h2,
 .heading-h2 {
   font-size: 22px;
@@ -78,6 +79,7 @@ h3,
   font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
+  margin-top: 15px;
 }
 
 h4,
@@ -114,6 +116,7 @@ a,
   font-weight: 900;
   letter-spacing: 0;
   font-style: normal;
+  margin-bottom: 25px;
 }
 
 .heading-xlarge {
@@ -123,7 +126,7 @@ a,
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-size: clamp(5rem, 15vw, 8rem);
+  font-size: clamp(4.5rem, 15vw, 8rem);
   word-wrap: break-word;
   margin-bottom: 20px;
 }
@@ -325,12 +328,12 @@ a,
 // Banner
 .banner {
   &--fullheight {
-    height: calc(-75px + 100vh);
+    min-height: calc(-75px + 100vh);
     display: flex;
   }
 
   &--70height {
-    height: calc(-75px + 75vh);
+    min-height: calc(-75px + 75vh);
     display: flex;
   }
 
@@ -343,17 +346,24 @@ a,
   }
 
   &__button-container {
-    position: absolute;
-    bottom: 10px;
-    width: 60px;
-    left: 0;
-    right: 0;
-    margin-left: auto !important;
-    margin-right: autO !important;
+    margin-left: 0;
+    @include breakpoint(medium) {
+      position: absolute;
+      bottom: 10px;
+      width: 60px;
+      left: 0;
+      right: 0;
+      margin-left: auto !important;
+      margin-right: autO !important;
+    }
   }
 
   .container {
     display: flex;
+    flex-direction: column;
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
   }
 }
 
@@ -369,16 +379,22 @@ a,
 
   &__text {
     h3 {
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 28px;
-      line-height: 1.4;
+      line-height: 1.2;
       font-weight: 900;
       text-transform: capitalize;
       letter-spacing: 0;
+      margin-bottom: 0;
+      @include breakpoint(medium) {
+        margin-top: 20px;
+        line-height: 1.4;
+      }
     }
     p {
       font-size: 15px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
   }
 }
@@ -440,6 +456,10 @@ a,
 .tabs {
   border: none;
   background: none;
+  margin-bottom: 50px;
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
 
   &-title {
     float: left;
@@ -467,6 +487,17 @@ a,
 
   &--centered {
     margin: 0 auto;
+  }
+}
+
+.row {
+  max-width: 100%;
+}
+
+.card.column {
+  margin-bottom: 35px;
+  @include breakpoint(medium) {
+    margin-bottom: 35px;
   }
 }
 
@@ -508,7 +539,7 @@ section {
   }
 
   &__highlight {
-    font-size: clamp(3.25rem, 7vw, 5rem);
+    font-size: clamp(3rem, 7vw, 5rem);
   }
 
   &__buttons {
@@ -592,14 +623,18 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 0;
 
   &__text {
-    padding: 50px 0;
+    padding: 20px 0;
+    @include breakpoint(medium) {
+      padding: 50px 0;
+    }
   }
 
   @include breakpoint(medium) {
     flex-direction: row;
+    margin: 50px 0;
 
     div {
       width: 50%;
