@@ -8,9 +8,6 @@
 @include foundation-global-styles;
 @include foundation-forms;
 @include foundation-typography;
-.row {
-  overflow: hidden;
-}
 
 // Grids (choose one)
 // @include foundation-xy-grid-classes;
@@ -123,7 +120,7 @@ a,
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-size: clamp(5rem, 15vw, 8rem);
+  font-size: clamp(4.5rem, 15vw, 8rem);
   word-wrap: break-word;
   margin-bottom: 20px;
 }
@@ -325,12 +322,12 @@ a,
 // Banner
 .banner {
   &--fullheight {
-    height: calc(-75px + 100vh);
+    min-height: calc(-75px + 100vh);
     display: flex;
   }
 
   &--70height {
-    height: calc(-75px + 75vh);
+    min-height: calc(-75px + 75vh);
     display: flex;
   }
 
@@ -343,17 +340,24 @@ a,
   }
 
   &__button-container {
-    position: absolute;
-    bottom: 10px;
-    width: 60px;
-    left: 0;
-    right: 0;
-    margin-left: auto !important;
-    margin-right: autO !important;
+    margin-left: 0;
+    @include breakpoint(medium) {
+      position: absolute;
+      bottom: 10px;
+      width: 60px;
+      left: 0;
+      right: 0;
+      margin-left: auto !important;
+      margin-right: autO !important;
+    }
   }
 
   .container {
     display: flex;
+    flex-direction: column;
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
   }
 }
 
