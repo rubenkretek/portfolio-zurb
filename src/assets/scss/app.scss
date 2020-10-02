@@ -379,16 +379,22 @@ a,
 
   &__text {
     h3 {
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 28px;
-      line-height: 1.4;
+      line-height: 1.2;
       font-weight: 900;
       text-transform: capitalize;
       letter-spacing: 0;
+      margin-bottom: 0;
+      @include breakpoint(medium) {
+        margin-top: 20px;
+        line-height: 1.4;
+      }
     }
     p {
       font-size: 15px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
   }
 }
