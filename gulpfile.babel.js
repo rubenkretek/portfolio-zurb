@@ -177,15 +177,6 @@ function server(done) {
   );
 }
 
-// Deploy site to production
-gulp.task("deploy", build, () => {
-  gulp.src("dist").pipe(
-    $.rsync({
-      remote: "deployer@127.0.0.1",
-    })
-  );
-});
-
 // Reload the browser with BrowserSync
 function reload(done) {
   browser.reload();
