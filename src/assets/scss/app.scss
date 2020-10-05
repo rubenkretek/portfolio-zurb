@@ -282,13 +282,15 @@ $scrollhide-nav-transition-speed: 0.5s;
   margin: 0 auto;
   z-index: 9999;
   width: 100%;
-  display: flex;
+  @include breakpoint(medium) {
+    display: flex;
+  }
 }
 
 .top-bar {
   background-color: #eee;
   border-bottom: 10px solid #000;
-  z-index: 9999;
+  z-index: 99;
 
   @include breakpoint(medium) {
     background: #fff;
@@ -304,10 +306,14 @@ $scrollhide-nav-transition-speed: 0.5s;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     width: 35%;
-    align-self: center;
+    @include breakpoint(medium) {
+      align-self: center;
+    }
   }
   .top-bar-right {
-    align-self: center;
+    @include breakpoint(medium) {
+      align-self: center;
+    }
     width: 35%;
   }
   .nav-logo {
@@ -342,6 +348,10 @@ $scrollhide-nav-transition-speed: 0.5s;
 }
 
 #main-nav {
+  top: 75px;
+  @include breakpoint(medium) {
+    top: 0;
+  }
   ul {
     li {
       a {
