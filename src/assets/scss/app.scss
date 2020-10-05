@@ -233,11 +233,25 @@ a,
 }
 
 // Main Nav
+$scrollhide-nav-transition-speed: 0.5s;
+
+.scrollhide-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  transition: transform $scrollhide-nav-transition-speed
+    cubic-bezier(0.86, 0, 0.07, 1);
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
 .title-bar {
   background: #fff;
   min-height: 75px;
   z-index: 9999;
-  position: relative;
 
   .menu-icon {
     margin-left: 1rem;
@@ -266,11 +280,15 @@ a,
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
 }
 
 .top-bar {
   background-color: #eee;
   border-bottom: 10px solid #000;
+  z-index: 9999;
 
   @include breakpoint(medium) {
     background: #fff;
@@ -286,8 +304,10 @@ a,
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     width: 35%;
+    align-self: center;
   }
   .top-bar-right {
+    align-self: center;
     width: 35%;
   }
   .nav-logo {
@@ -344,9 +364,10 @@ a,
   justify-content: center;
 
   &--fullheight {
-    min-height: calc(-75px + 100vh);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   &--70height {

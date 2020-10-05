@@ -22299,7 +22299,16 @@ __webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dis
 //import './lib/foundation-explicit-pieces';
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); // Sticky on scroll up nav
+
+var prev = 0;
+var $window = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window);
+var nav = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".scrollhide-nav");
+$window.on("scroll", function () {
+  var scrollTop = $window.scrollTop();
+  nav.toggleClass("hidden", scrollTop > prev);
+  prev = scrollTop;
+});
 
 /***/ }),
 

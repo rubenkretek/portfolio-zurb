@@ -8,10 +8,7 @@
     <title>Ruben Kretek – Web designer & Developer in West Sussex</title>
     <link rel="stylesheet" href="https://use.typekit.net/hob4mum.css" />
     <link rel="stylesheet" href="../assets/css/app.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+
     <script
       src="https://kit.fontawesome.com/73ee2bf7e1.js"
       crossorigin="anonymous"
@@ -41,7 +38,11 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="medium">
+    <div
+  class="title-bar scrollhide-nav"
+  data-responsive-toggle="main-nav"
+  data-hide-for="medium"
+>
   <button class="menu-icon dark" type="button" data-toggle></button>
   <a href="/" class="title-bar__home-link">
     <img
@@ -52,35 +53,37 @@
   </a>
 </div>
 <nav
-  class="top-bar nav-container"
+  class="top-bar scrollhide-nav"
   id="main-nav"
   data-toggler
   data-animate="slide-in-down slide-out-up"
 >
-  <div class="top-bar-left">
-    <ul
-      class="menu expanded align-left medium-align-center vertical medium-horizontal"
-    >
-      <li><a href="/about">About</a></li>
-      <li><a href="/work">Work</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-center show-for-medium">
-    <a href="/">
-      <img
-        class="nav-logo"
-        src="/assets/img/black-logo.svg"
-        alt="Design talk logo"
-      />
-    </a>
-  </div>
-  <div class="top-bar-right">
-    <ul
-      class="menu expanded align-left medium-align-center vertical medium-horizontal"
-    >
-      <li><a href="/">Home</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
+  <div class="nav-container">
+    <div class="top-bar-left">
+      <ul
+        class="menu expanded align-left medium-align-center vertical medium-horizontal"
+      >
+        <li><a href="/about">About</a></li>
+        <li><a href="/work">Work</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-center show-for-medium">
+      <a href="/">
+        <img
+          class="nav-logo"
+          src="/assets/img/black-logo.svg"
+          alt="Design talk logo"
+        />
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <ul
+        class="menu expanded align-left medium-align-center vertical medium-horizontal"
+      >
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
  <section id="work__section-1" class="banner work__banner banner--70height">
