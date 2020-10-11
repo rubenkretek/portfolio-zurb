@@ -36,6 +36,8 @@
     <meta name="msapplication-TileColor" content="#ffc40d" />
     <meta name="msapplication-config" content="/assets/img/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
   </head>
   <body>
     <div
@@ -90,8 +92,8 @@
   <div class="container">
     <div class="row banner__content-container">
       <div class="small-12 medium-10 large-6">
-        <h1 class="heading-xlarge">Work</h1>
-        <p class="text--banner">
+        <h1 class="heading-xlarge" data-aos="fade-right">Work</h1>
+        <p class="text--banner" data-aos="fade-left">
           From hand coded PHP websites to effective UX designs, I look to
           improve in all areas of my web skills,
           <span class="text--red">I take pride in my work</span>, and always
@@ -107,7 +109,7 @@
 
 <section id="work__section-2"><div class="container">
   <div class="row small-up-1 medium-up-3 large-up-3">
-    <div class="card column">
+    <div class="card column" data-aos="fade-up-right">
       <img class="card__image" src="/assets/img/gs-thumbnail.png" />
       <div class="card__text">
         <h3>Waste Clearance</h3>
@@ -119,7 +121,7 @@
       </div>
     </div>
 
-    <div class="card column">
+    <div class="card column" data-aos="zoom-out-down">
       <img class="card__image" src="/assets/img/huga-thumbnail.png" />
       <div class="card__text">
         <h3>Marketing Agency</h3>
@@ -134,7 +136,7 @@
       </div>
     </div>
 
-    <div class="card column">
+    <div class="card column" data-aos="fade-up-left">
       <img class="card__image" src="/assets/img/firstcol-thumbnail.png" />
       <div class="card__text">
         <h3>Care Agency</h3>
@@ -153,7 +155,7 @@
 <section class="contact-module">
   <div class="row">
     <div class="small-10 small-centered contact-module__text">
-      <h2 class="heading-xlarge">
+      <h2 class="heading-xlarge" data-aos="fade-down">
         Let's <br />
         work <br />
         <span class="text--red-highlight contact-module__highlight"
@@ -163,18 +165,21 @@
     </div>
     <div class="contact-module__buttons">
       <a class="button button--icon" href="mailto:ruben@design-talk.co.uk"
+      data-aos="fade-up-right"
         ><i class="far fa-envelope"></i
       ></a>
       <a
         class="button button--icon"
         href="https://www.linkedin.com/in/ruben-kretek-ab296b13b/"
         target="_blank"
+        data-aos="zoom-out-up"
         ><i class="fab fa-linkedin-in"></i
       ></a>
       <a
         class="button button--icon"
         href="https://github.com/rubenkretek"
         target="_blank"
+        data-aos="fade-up-left"
         ><i class="fab fa-github"></i
       ></a>
     </div>
@@ -216,5 +221,24 @@
 
 
     <script src="../assets/js/app.js"></script>
+    
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+  // Global settings:
+  
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  duration: 300, // values from 0 to 3000, with step 50ms
+  easing: 'ease-in-out-quart', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
   </body>
 </html>
